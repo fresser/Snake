@@ -1,7 +1,7 @@
 float mapSize = 0.8; //PERCENTAGE OF HEIGHT
 float rows = 25; // ROWS AND COLUMNS IN MAP
 int maxTails = 256; //Maximum of tails-squares
-int speed = 5;//test af github
+int speed = 5;
 float tailSize = 0.8;
 int difficulty;
 

@@ -4,8 +4,10 @@ int maxTails = 256; //Maximum of tails-squares
 int speed = 5;//test af github
 float tailSize = 0.8;
 int difficulty;
-int inhibitX[] = new int[25];
-int inhibitY[] = new int[25];
+
+int inhibitNr = 100;
+int inhibitX[] = new int[inhibitNr];
+int inhibitY[] = new int[inhibitNr];
 
 float mapStartX, mapStartY, rowSize;
 int tailX[] = new int[maxTails];
@@ -44,8 +46,8 @@ void setup() {
 }
 
 //Random Start Pos for Snake Head
-int snakeX = int(random(0, rows));
-int snakeY = int(random(0, rows));
+int snakeX = int(rows/2);
+int snakeY = int(rows/2);
 
 int snakeXSpeed = 0;
 int snakeYSpeed = 0;
@@ -61,8 +63,8 @@ void doClear() {
   frameNr = 0;
   snakeXSpeed = 0;
   snakeYSpeed = 0;
-  snakeX = int(random(0, rows));
-  snakeY = int(random(0, rows));
+  snakeX = int(rows/2);
+  snakeY = int(rows/2);
   for (int i = 0; i<maxTails; i++) {
     tailX[i] = -1;
     tailY[i] = -1;
@@ -82,7 +84,7 @@ void draw() {
     fill(255);
     textAlign(CENTER, CENTER);
     textSize(100);
-    text("Snake by Lau", width/2, height*0.25);
+    text("Snake-Man", width/2, height*0.25);
     rectMode(CENTER);
     rect(width/2, height*0.4, 0.3*width, 0.1*height);
 
@@ -124,6 +126,11 @@ public boolean spaceOccupied() {
       occupied = true;
     }
   }
+  for (int i = 0; i<inhibitNr; i++){
+    if (inhibitX[i] == biteX && inhibitY[i] == biteY) {
+      occupied = true;
+    }
+  }
   return occupied;
 }
 
@@ -136,8 +143,13 @@ public boolean checkIfGameover() {
       gameOver = true;
     }
   }
-  if (difficulty == 1) {
+  if (difficulty == 1 || difficulty == 2) {
     if (snakeX >= rows || snakeX < 0 || snakeY >= rows || snakeY < 0) {
+      gameOver = true;
+    }
+  }
+  for (int i = 0; i<inhibitNr; i++) {
+    if (snakeX == inhibitX[i] && snakeY == inhibitY[i] && difficulty == 2) {
       gameOver = true;
     }
   }

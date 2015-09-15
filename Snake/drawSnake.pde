@@ -1,5 +1,5 @@
 //derp
-
+float rotateSnakeHeadWhileIdle = 0;
 void drawSnake() {
   
   rectMode(CORNER);
@@ -25,6 +25,10 @@ void drawSnake() {
   }
   if (snakeXSpeed == -1) {
     rotate(PI);
+  }
+  if(snakeXSpeed == 0 && snakeYSpeed == 0){
+    rotate(PI*rotateSnakeHeadWhileIdle);
+    rotateSnakeHeadWhileIdle +=0.1;
   }
   shape(snake, 0, 0, rowSize, rowSize);  
   
@@ -55,7 +59,7 @@ void drawSnake() {
 
   snakeX = snakeX+snakeXSpeed;
   snakeY = snakeY+snakeYSpeed;
-if(difficulty == 1){
+if(difficulty == 1 || difficulty == 2){
   //do nothing
 }
 else{

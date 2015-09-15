@@ -80,25 +80,7 @@ boolean showGui = true;
 
 void draw() {
   if (showGui) {
-    background(0);
-    fill(255);
-    textAlign(CENTER, CENTER);
-    textSize(100);
-    text("Snake-Man", width/2, height*0.25);
-    rectMode(CENTER);
-    rect(width/2, height*0.4, 0.3*width, 0.1*height);
-
-    rect(width/2, height*0.52, 0.3*width, 0.1*height);
-    rect(width/2, height*0.64, 0.3*width, 0.1*height);
-
-    textSize(height/18);
-    fill(0);
-    text("Easy", width/2, height*0.4);
-    text("Intermediate", width/2, height*0.52);
-    text("Hardcore", width/2, height*0.64);
-    textSize(height/30);
-    fill(255);
-    text("Scroll to select speed: "+playerSpeed, width/2, height*0.72);
+    RenderMenu();
   } else if (frameNr % speed == 0) {
     background(grass);
     if (checkIfGameover()) {

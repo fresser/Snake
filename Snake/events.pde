@@ -13,13 +13,11 @@ void mouseWheel(MouseEvent event) {
   speed = 6-playerSpeed;
 }
 void mouseClicked() {
-  if(showGui){
-    showGui = false;
-    difficulty = 1;
-    if(difficulty == 2){
-    setupInhibits();
-    }
-  }
+  clickedMenu(
+  width/2, height*0.4, 0.3*width, 0.1*height,
+  width/2, height*0.52, 0.3*width, 0.1*height,
+  width/2, height*0.64, 0.3*width, 0.1*height
+  );
 }
 
 

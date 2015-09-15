@@ -16,7 +16,7 @@ void drawMap() {
 
   //tegn linjer
   stroke(0);
-  for (int i=1; i<=rows; i++) {
+  /*for (int i=1; i<=rows; i++) {
    float y = mapStartY+i*rowSize;
    float x1 = (width-(height*mapSize))/2;
    float x2 = width-x1;
@@ -26,5 +26,5 @@ void drawMap() {
    float y1 = (height*(1-mapSize))/2;
    float y2 = height-y1;
    line(x, y1, x, y2);
-   }
+   }*/
 }

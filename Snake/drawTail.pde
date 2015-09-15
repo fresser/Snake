@@ -6,8 +6,10 @@ void drawTails() {
       rectMode(CORNER);
       float x = mapStartX+(tailX[i]*rowSize)+(((1-tailSize)/2)*rowSize);
       float y = mapStartY+(tailY[i]*rowSize)+(((1-tailSize)/2)*rowSize);
+      float rectSize = tailSize*rowSize;
       fill(100);
-      rect(x, y, rowSize*tailSize, rowSize*tailSize);
+      noStroke();
+      rect(x, y, rectSize,rectSize);
     }
   }
   //shiftAllTails

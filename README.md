@@ -1,2 +1,3 @@
 # Snake
-Denne fil er en readme fil lol
+Sørg for at alle filer er downloadet
+Også open "Snake.pde" i Processing for at redigere alle tabs.

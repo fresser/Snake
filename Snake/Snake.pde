@@ -4,7 +4,7 @@ int maxTails = 256; //Maximum of tails-squares
 int speed = 5;//test af github
 float tailSize = 0.8;
 int difficulty;
-int inhibitX = new int[25];
+int inhibitX[] = new int[25];
 int inhibitY[] = new int[25];
 
 float mapStartX, mapStartY, rowSize;

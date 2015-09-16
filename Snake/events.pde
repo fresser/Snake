@@ -10,7 +10,7 @@ void mouseWheel(MouseEvent event) {
       playerSpeed = playerSpeed +1;
     }
   }
-  speed = 6-playerSpeed;
+  speed = (6-playerSpeed);
 }
 void mouseClicked() {
   clickedMenu(

@@ -74,6 +74,8 @@ void doClear() {
   }
   biteX = int(random(0, rows));
   biteY = int(random(0, rows));
+  score = 0;
+  showGui = true;
 }
 
 boolean showGui = true;
@@ -81,7 +83,7 @@ boolean showGui = true;
 void draw() {
   if (showGui) {
     RenderMenu();
-  } else if (frameNr % speed == 0) {
+  } else if (frameNr % (speed*4) == 0) {
     background(grass);
     if (checkIfGameover()) {
       //background(255);

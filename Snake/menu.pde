@@ -13,7 +13,7 @@ void RenderMenu()
   } else {
     fill(255);
   }
-  rect(width/2, height*0.4, 0.3*width, 0.1*height);
+  rect(width/2, height*0.4, 0.4*width, 0.1*height);
   
   if (OverButton(width/2, height*0.52, 0.3*width, 0.1*height))
   {
@@ -21,7 +21,7 @@ void RenderMenu()
   } else {
     fill(255);
   }
-  rect(width/2, height*0.52, 0.3*width, 0.1*height);
+  rect(width/2, height*0.52, 0.4*width, 0.1*height);
   
   if (OverButton(width/2, height*0.64, 0.3*width, 0.1*height))
   {
@@ -29,7 +29,7 @@ void RenderMenu()
   } else {
     fill(255);
   }
-  rect(width/2, height*0.64, 0.3*width, 0.1*height);
+  rect(width/2, height*0.64, 0.4*width, 0.1*height);
 
   textSize(height/18);
   fill(0);
